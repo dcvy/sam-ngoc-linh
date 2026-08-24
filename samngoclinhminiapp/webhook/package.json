@@ -1,0 +1,6 @@
+{
+  "name": "mlhub-webhook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Zalo Mini App webhook endpoint for MLHub (deployed separately from the mini app frontend)"
+}
