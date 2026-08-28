@@ -17,7 +17,7 @@ function formatDate(iso: string) {
 }
 
 const orderStatusLabel: Record<Order["status"], { text: string; className: string }> = {
-  thanh_cong: { text: "Đơn hàng: Thành công", className: "bg-emerald-100 text-emerald-700" },
+  thanh_cong: { text: "Đơn hàng: Tạo thành công", className: "bg-emerald-100 text-emerald-700" },
   da_huy: { text: "Đơn hàng: Đã huỷ", className: "bg-red-100 text-red-600" },
 };
 
@@ -106,11 +106,11 @@ export default function OrderHistoryPage() {
                 >
                   {orderStatusLabel[order.status].text}
                 </span>
-                <span
+                {/* <span
                   className={`rounded-full px-3 py-1 text-[12px] font-semibold ${paymentStatusLabel[order.paymentStatus].className}`}
                 >
                   {paymentStatusLabel[order.paymentStatus].text}
-                </span>
+                </span> */}
               </div>
             </div>
           ))}

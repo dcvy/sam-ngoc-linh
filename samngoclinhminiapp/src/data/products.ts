@@ -15,7 +15,7 @@ export const PRODUCTS: Product[] = [
     price: 180500,
     stock: 40,
     category: "ca-phe",
-    imageUrl: "https://picsum.photos/seed/samcafe1/500/500",
+    imageUrl: "../../public/assets/image/cf1.jpg",
   },
   {
     id: "ca-phe-hoa-tan-lon",
@@ -23,7 +23,7 @@ export const PRODUCTS: Product[] = [
     price: 385000,
     stock: 18,
     category: "ca-phe",
-    imageUrl: "https://picsum.photos/seed/samcafe2/500/500",
+    imageUrl: "../../public/assets/image/cf2.jpg",
   },
   {
     id: "sam-ngam-mat-ong-450",
@@ -31,7 +31,7 @@ export const PRODUCTS: Product[] = [
     price: 6400000,
     stock: 8,
     category: "mat-ong",
-    imageUrl: "https://picsum.photos/seed/sammatong1/500/500",
+    imageUrl: "../../public/assets/image/mo1.jpg",
   },
   {
     id: "mat-ong-rung-sam",
@@ -39,7 +39,7 @@ export const PRODUCTS: Product[] = [
     price: 890000,
     stock: 12,
     category: "mat-ong",
-    imageUrl: "https://picsum.photos/seed/sammatong2/500/500",
+    imageUrl: "../../assets/image/mo2.jpg",
   },
   {
     id: "tra-sam-tui-loc",
@@ -47,7 +47,7 @@ export const PRODUCTS: Product[] = [
     price: 145000,
     stock: 25,
     category: "tra",
-    imageUrl: "https://picsum.photos/seed/samtra1/500/500",
+    imageUrl: "../../public/assets/image/tra1.jpg",
   },
   {
     id: "tra-sam-la",
@@ -55,6 +55,6 @@ export const PRODUCTS: Product[] = [
     price: 320000,
     stock: 15,
     category: "tra",
-    imageUrl: "https://picsum.photos/seed/samtra2/500/500",
+    imageUrl: "../../public/assets/image/tra2.jpg",
   },
 ];

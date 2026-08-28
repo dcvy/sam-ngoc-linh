@@ -10,14 +10,14 @@ import { CATEGORIES } from "@/data/categories";
 
 // TODO: thay bằng ảnh banner thật của Sâm Ngọc Linh Tu Mơ Rông.
 const bannerSlides = [
-  { src: "https://picsum.photos/seed/tumorong1/800/500", alt: "Sâm Ngọc Linh Tu Mơ Rông" },
-  { src: "https://picsum.photos/seed/tumorong2/800/500", alt: "Vùng trồng sâm Tu Mơ Rông" },
-  { src: "https://picsum.photos/seed/tumorong3/800/500", alt: "Sản phẩm chế biến từ sâm" },
+  { src: "../../public/assets/image/1.jpg", alt: "Sâm Ngọc Linh Tu Mơ Rông" },
+  { src: "../../public/assets/image/2.jpg", alt: "Vùng trồng sâm Tu Mơ Rông" },
+  { src: "../../public/assets/image/3.jpg", alt: "Sản phẩm chế biến từ sâm" },
 ];
 
 const CATEGORY_ICONS: Record<string, React.ReactNode> = {
   "ca-phe": <CoffeeIcon className="h-6 w-6" />,
-  tra: <LeafIcon className="h-6 w-6" />,
+  "tra": <LeafIcon className="h-6 w-6" />,
   "mat-ong": <HoneyDropIcon className="h-6 w-6" />,
 };
 
