@@ -1,5 +1,4 @@
 import { useState, type ChangeEvent, type ReactNode } from "react";
-import { Page } from "zmp-ui";
 
 import { ArrowLeftIcon, CashIcon } from "@/components/icons";
 import CartSummaryBar from "@/components/order/cart-summary-bar";
@@ -43,7 +42,7 @@ export default function CustomerInfoPage({ onBack, onSubmit }: CustomerInfoPageP
   const { cartCount, cartTotal, submitOrder } = useOrders();
   const [form, setForm] = useState<CustomerInfo>(emptyInfo);
 
-  const isValid = form.phone.trim().length >= 9 && form.name.trim().length > 0;
+  const isValid = form.phone.trim().length > 0 && form.name.trim().length > 0;
 
   const update =
     (field: keyof CustomerInfo) => (e: ChangeEvent<HTMLInputElement>) =>
@@ -56,7 +55,7 @@ export default function CustomerInfoPage({ onBack, onSubmit }: CustomerInfoPageP
   };
 
   return (
-    <Page className="flex flex-col bg-[#F5F5F7]">
+    <div className="flex flex-col bg-[#F5F5F7]">
       <div
         className="mx-auto w-full max-w-[430px] flex-1 px-4 pb-72"
         style={{ paddingTop: "calc(env(safe-area-inset-top) + 12px)" }}
@@ -162,6 +161,6 @@ export default function CustomerInfoPage({ onBack, onSubmit }: CustomerInfoPageP
         secondaryLabel="QUAY LẠI"
         onSecondary={onBack}
       />
-    </Page>
+    </div>
   );
 }

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Page } from "zmp-ui";
 
 import { FilterIcon, SearchIcon } from "@/components/icons";
 import { useOrders, type Order } from "@/context/orders-context";
@@ -45,7 +44,7 @@ export default function OrderHistoryPage() {
   });
 
   return (
-    <Page className="flex flex-col bg-[#F5F5F7]">
+    <div className="flex flex-col bg-[#F5F5F7]">
       <div
         className="mx-auto w-full max-w-[430px] flex-1 px-4 pb-28"
         style={{ paddingTop: "calc(env(safe-area-inset-top) + 12px)" }}
@@ -122,6 +121,6 @@ export default function OrderHistoryPage() {
           )}
         </div>
       </div>
-    </Page>
+    </div>
   );
 }

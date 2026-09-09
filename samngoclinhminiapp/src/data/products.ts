@@ -15,7 +15,7 @@ export const PRODUCTS: Product[] = [
     price: 180500,
     stock: 40,
     category: "ca-phe",
-    imageUrl: "../../public/assets/image/cf1.jpg",
+    imageUrl: "../../assets/image/cf1.jpg",
   },
   {
     id: "ca-phe-hoa-tan-lon",
@@ -23,7 +23,7 @@ export const PRODUCTS: Product[] = [
     price: 385000,
     stock: 18,
     category: "ca-phe",
-    imageUrl: "../../public/assets/image/cf2.jpg",
+    imageUrl: "../../assets/image/cf2.jpg",
   },
   {
     id: "sam-ngam-mat-ong-450",
@@ -31,7 +31,7 @@ export const PRODUCTS: Product[] = [
     price: 6400000,
     stock: 8,
     category: "mat-ong",
-    imageUrl: "../../public/assets/image/mo1.jpg",
+    imageUrl: "../../assets/image/mo1.jpg",
   },
   {
     id: "mat-ong-rung-sam",
@@ -47,7 +47,7 @@ export const PRODUCTS: Product[] = [
     price: 145000,
     stock: 25,
     category: "tra",
-    imageUrl: "../../public/assets/image/tra1.jpg",
+    imageUrl: "../../assets/image/tra1.jpg",
   },
   {
     id: "tra-sam-la",
@@ -55,6 +55,6 @@ export const PRODUCTS: Product[] = [
     price: 320000,
     stock: 15,
     category: "tra",
-    imageUrl: "../../public/assets/image/tra2.jpg",
+    imageUrl: "../../assets/image/tra2.jpg",
   },
 ];

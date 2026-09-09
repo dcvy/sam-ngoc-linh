@@ -4,7 +4,7 @@ import BottomNav, { type NavItem } from "@/components/bottom-nav";
 import { CartIcon, HomeIcon, ListIcon, UserIcon } from "@/components/icons";
 import { OrdersProvider } from "@/context/orders-context";
 
-import HomePage from "@/pages/index";
+import HomePage from "@/pages/HomePage";
 import CustomerInfoPage from "@/pages/order/customer-info-page";
 import OrderHistoryPage from "@/pages/order/order-history-page";
 import OrderSuccessPage from "@/pages/order/order-success-page";

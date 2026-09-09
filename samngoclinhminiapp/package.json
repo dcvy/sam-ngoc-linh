@@ -1,7 +1,7 @@
 {
-  "name": "mlhubminiapp",
+  "name": "samngoclinhminiapp",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "zmp-blank-templates",
   "repository": "",
   "license": "UNLICENSED",
@@ -15,9 +15,10 @@
     "Samsung >= 5"
   ],
   "scripts": {
-    "login": "zmp login",
-    "start": "zmp start",
-    "deploy": "zmp deploy"
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "jotai": "^2.12.1",

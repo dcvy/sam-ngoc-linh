@@ -1,5 +1,4 @@
 import { useMemo, useState } from "react";
-import { Page } from "zmp-ui";
 
 import BannerCarousel from "@/components/banner-carousel";
 import CategoryTabs from "@/components/category-tabs";
@@ -10,9 +9,9 @@ import { CATEGORIES } from "@/data/categories";
 
 // TODO: thay bằng ảnh banner thật của Sâm Ngọc Linh Tu Mơ Rông.
 const bannerSlides = [
-  { src: "../../public/assets/image/1.jpg", alt: "Sâm Ngọc Linh Tu Mơ Rông" },
-  { src: "../../public/assets/image/2.jpg", alt: "Vùng trồng sâm Tu Mơ Rông" },
-  { src: "../../public/assets/image/3.jpg", alt: "Sản phẩm chế biến từ sâm" },
+  { src: "../../assets/image/1.jpg", alt: "Sâm Ngọc Linh Tu Mơ Rông" },
+  { src: "../../assets/image/2.jpg", alt: "Vùng trồng sâm Tu Mơ Rông" },
+  { src: "../../assets/image/3.jpg", alt: "Sản phẩm chế biến từ sâm" },
 ];
 
 const CATEGORY_ICONS: Record<string, React.ReactNode> = {
@@ -42,7 +41,7 @@ function HomePage() {
   };
 
   return (
-    <Page className="flex flex-col bg-[#F5F5F7] dark:bg-black">
+    <div className="flex flex-col bg-[#F5F5F7] dark:bg-black">
       <div
         className="mx-auto w-full max-w-[430px] flex-1 space-y-5 px-4 pb-28"
         style={{ paddingTop: "calc(env(safe-area-inset-top) + 12px)" }}
@@ -75,7 +74,7 @@ function HomePage() {
           )}
         </div>
       </div>
-    </Page>
+    </div>
   );
 }
 

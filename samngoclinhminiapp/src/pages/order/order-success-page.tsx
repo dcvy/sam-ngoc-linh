@@ -1,5 +1,4 @@
 import { CheckIcon } from "@/components/icons";
-import { Page } from "zmp-ui";
 
 export interface OrderSuccessPageProps {
   onDone: () => void;
@@ -7,7 +6,7 @@ export interface OrderSuccessPageProps {
 
 export default function OrderSuccessPage({ onDone }: OrderSuccessPageProps) {
   return (
-    <Page className="flex flex-col items-center justify-center bg-[#F5F5F7] px-6 text-center">
+    <div className="flex flex-col items-center justify-center bg-[#F5F5F7] px-6 text-center">
       <div className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-[#1B4332] to-[#2F9E58] text-white">
         <CheckIcon className="h-10 w-10" />
       </div>
@@ -24,6 +23,6 @@ export default function OrderSuccessPage({ onDone }: OrderSuccessPageProps) {
       >
         Về trang chủ
       </button>
-    </Page>
+    </div>
   );
 }
