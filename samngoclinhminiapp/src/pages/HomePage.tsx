@@ -43,7 +43,7 @@ function HomePage() {
   return (
     <div className="flex flex-col bg-[#F5F5F7] dark:bg-black">
       <div
-        className="mx-auto w-full max-w-[430px] flex-1 space-y-5 px-4 pb-28"
+        className="mx-auto w-full max-w-[430px] flex-1 space-y-5 px-4 pb-28 border-x border-black/10 dark:border-white/10 bg-white dark:bg-black90"
         style={{ paddingTop: "calc(env(safe-area-inset-top) + 12px)" }}
       >
         <BannerCarousel slides={bannerSlides} />
