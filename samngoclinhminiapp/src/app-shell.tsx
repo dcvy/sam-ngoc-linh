@@ -4,12 +4,12 @@ import BottomNav, { type NavItem } from "@/components/bottom-nav";
 import { CartIcon, HomeIcon, ListIcon, UserIcon } from "@/components/icons";
 import { OrdersProvider, useOrders } from "@/context/orders-context";
 
-import HomePage from "@/pages/HomePage";
+import AccountPage from "@/pages/account-page";
+import HomePage from "@/pages/home-page";
 import CustomerInfoPage from "@/pages/order/customer-info-page";
 import OrderHistoryPage from "@/pages/order/order-history-page";
 import OrderSuccessPage from "@/pages/order/order-success-page";
 import ProductSelectPage from "@/pages/order/product-select-page";
-import PlaceholderPage from "@/pages/placeholder-page";
 
 type MainTab = "home" | "orders" | "account";
 type FlowStep = null | "product-select" | "customer-info" | "success";
@@ -83,7 +83,7 @@ function ShellInner() {
     <>
       {activeTab === "home" && <HomePage />}
       {activeTab === "orders" && <OrderHistoryPage />}
-      {activeTab === "account" && <PlaceholderPage title="Tài khoản" />}
+      {activeTab === "account" && <AccountPage onBack={() => setActiveTab("home")} />}
 
       <BottomNav
         items={navItems}
