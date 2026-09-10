@@ -5,6 +5,8 @@ export interface NavItem {
   key: string;
   label: string;
   icon: ReactNode;
+  /** Số hiển thị dạng badge trên icon (vd: số sản phẩm trong giỏ, số đơn hàng). Ẩn nếu <= 0. */
+  badge?: number;
 }
 
 export interface BottomNavProps {
@@ -12,6 +14,10 @@ export interface BottomNavProps {
   activeKey: string;
   onChange: (key: string) => void;
   onScan?: () => void;
+}
+
+function formatBadge(n: number) {
+  return n > 99 ? "99+" : String(n);
 }
 
 /**
@@ -30,6 +36,7 @@ export default function BottomNav({
 
   const renderItem = (item: NavItem) => {
     const isActive = item.key === activeKey;
+    const showBadge = !!item.badge && item.badge > 0;
     return (
       <button
         key={item.key}
@@ -37,12 +44,22 @@ export default function BottomNav({
         onClick={() => onChange(item.key)}
         className="flex flex-1 flex-col items-center justify-center gap-1 py-2"
       >
-        <span
-          className={`h-6 w-6 ${
-            isActive ? "text-[#1B4332]" : "text-gray-400 dark:text-white/40"
-          }`}
-        >
-          {item.icon}
+        <span className="relative flex h-6 w-6">
+          <span
+            className={`h-6 w-6 ${
+              isActive ? "text-[#1B4332]" : "text-gray-400 dark:text-white/40"
+            }`}
+          >
+            {item.icon}
+          </span>
+          {showBadge && (
+            <span
+              className="absolute -right-2.5 -top-1.5 flex h-4 min-w-[16px] items-center justify-center rounded-full bg-[#E11D48] px-1 text-[9px] font-bold leading-none text-white ring-2 ring-white dark:ring-black"
+              aria-label={`${item.badge} thông báo`}
+            >
+              {formatBadge(item.badge!)}
+            </span>
+          )}
         </span>
         <span
           className={`text-[11px] font-semibold ${

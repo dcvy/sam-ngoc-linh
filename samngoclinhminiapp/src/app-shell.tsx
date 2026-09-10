@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import BottomNav, { type NavItem } from "@/components/bottom-nav";
 import { CartIcon, HomeIcon, ListIcon, UserIcon } from "@/components/icons";
-import { OrdersProvider } from "@/context/orders-context";
+import { OrdersProvider, useOrders } from "@/context/orders-context";
 
 import HomePage from "@/pages/HomePage";
 import CustomerInfoPage from "@/pages/order/customer-info-page";
@@ -14,20 +14,31 @@ import PlaceholderPage from "@/pages/placeholder-page";
 type MainTab = "home" | "orders" | "account";
 type FlowStep = null | "product-select" | "customer-info" | "success";
 
-const navItems: NavItem[] = [
-  { key: "home", label: "Trang chủ", icon: <HomeIcon className="h-full w-full" /> },
-  { key: "orders", label: "Đơn hàng", icon: <ListIcon className="h-full w-full" /> },
-  // "Giỏ hàng" không phải 1 tab nội dung — bấm vào là nhảy thẳng sang luồng tạo đơn hàng
-  // (xem handleNavChange bên dưới), nên không cần key này trong MainTab.
-  { key: "cart", label: "Giỏ hàng", icon: <CartIcon className="h-full w-full" /> },
-  { key: "account", label: "Tài khoản", icon: <UserIcon className="h-full w-full" /> },
-];
-
 function ShellInner() {
   const [activeTab, setActiveTab] = useState<MainTab>("home");
   // flowStep khác null nghĩa là đang ở luồng tạo đơn hàng toàn màn hình — ẩn bottom nav,
   // đúng với hành vi trong ảnh chụp màn hình (bước chọn hàng / nhập thông tin không có navbar).
   const [flowStep, setFlowStep] = useState<FlowStep>(null);
+  const { cartCount, orders } = useOrders();
+
+  const navItems: NavItem[] = [
+    { key: "home", label: "Trang chủ", icon: <HomeIcon className="h-full w-full" /> },
+    {
+      key: "orders",
+      label: "Đơn hàng",
+      icon: <ListIcon className="h-full w-full" />,
+      badge: orders.length,
+    },
+    // "Giỏ hàng" không phải 1 tab nội dung — bấm vào là nhảy thẳng sang luồng tạo đơn hàng
+    // (xem handleNavChange bên dưới), nên không cần key này trong MainTab.
+    {
+      key: "cart",
+      label: "Giỏ hàng",
+      icon: <CartIcon className="h-full w-full" />,
+      badge: cartCount,
+    },
+    { key: "account", label: "Tài khoản", icon: <UserIcon className="h-full w-full" /> },
+  ];
 
   if (flowStep === "product-select") {
     return (
